@@ -1,15 +1,16 @@
 function getcomputerChoice(){
-let choices = [ 'rock' , 'paper', 'scissors']
+let choices = [ 'rock' , 'paper', 'scissors'] // array of choices
 let computer = choices[Math.floor(Math.random()*choices.length)];
-return computer;
+return computer; // Random choice by a computer, from Rock, Paper, Scissors
 }
-let Pscore =0;
-let Cscore =0;
+let Pscore =0; // Player Score starts at 0
+let Cscore =0; // Computer score starts at 0
 
 function playRound(playerSelection, computerSelection){
 
  
-
+// This section is everything that happens in one round.
+// We check what the user writes vs what the computer has
 
     if ( (playerSelection === 'rock' && computerSelection === 'scissors' ) || 
         (playerSelection === 'scissors' && computerSelection === 'paper') ||
