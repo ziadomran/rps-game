@@ -1,6 +1,5 @@
 let choices = [ 'rock' , 'paper', 'scissors'] // array of choices
 
-
 function getcomputerChoice(){
     let computer = choices[Math.floor(Math.random()*choices.length)];
     return computer; // Random choice by a computer, from Rock, Paper, Scissors
@@ -48,9 +47,9 @@ gameOver();
 function gameOver(){
     if (playerScore === 5 || computerScore === 5)
     {
-        
         roundResult.textContent = findWinner()
         resultPara.textContent =  `GG END`;
+        //When game is over, disable buttons
         rock.disabled = true;
         paper.disabled = true;
         scissors.disabled = true;
@@ -99,11 +98,6 @@ const roundResult = document.createElement('p');
 const resultPara = document.createElement('p');
 const select = document.createElement('p');
 const finalResult =  document.createElement('p')
-
-
-
-// FinalResult.textContent = (`Final Score is: Player ${playerScore} - ${computerScore} Computer`)
-
 
 document.body.appendChild(div);
 div.appendChild(select);
